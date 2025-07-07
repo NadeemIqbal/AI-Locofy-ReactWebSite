@@ -1,0 +1,149 @@
+import { FunctionComponent, useMemo, type CSSProperties } from "react";
+import { Box, Typography } from "@mui/material";
+import DiscoutnTag from "./DiscoutnTag";
+import ImagePlaceholder from "./ImagePlaceholder";
+import ColorSelector from "./ColorSelector";
+
+export type ProductCardHomeType = {
+  className?: string;
+  property11?: string;
+  property12?: string;
+  text?: string;
+  label?: boolean;
+  icon?: boolean;
+  lines?: boolean;
+  imagePlaceholderWidth?: string;
+  imagePlaceholderHeight?: string;
+  imagePlaceholderBorder?: string;
+  imagePlaceholderBorderRadius?: string;
+  imagePlaceholderBackground?: string;
+  colorSelectorProperty1?: string;
+  colorSelectorProperty11?: string;
+  colorSelectorProperty12?: string;
+  colorSelectorProperty13?: string;
+  colorSelectorProperty14?: string;
+  colorSelectorRectangleBoxBackground?: string;
+  colorSelectorRectangleBoxBackground1?: string;
+  colorSelectorRectangleBoxBackground2?: string;
+  colorSelectorRectangleBoxBackground3?: string;
+  colorSelectorRectangleBoxBackground4?: string;
+
+  /** Variant props */
+  property1?: string;
+
+  /** Style props */
+  productCardHomeFlex?: CSSProperties["flex"];
+  productCardHomeWidth?: CSSProperties["width"];
+};
+
+const ProductCardHome: FunctionComponent<ProductCardHomeType> = ({
+  className = "",
+  property1 = "Default",
+  productCardHomeFlex,
+  productCardHomeWidth,
+  property11,
+  property12,
+  text,
+  label,
+  icon,
+  lines,
+  imagePlaceholderWidth,
+  imagePlaceholderHeight,
+  imagePlaceholderBorder,
+  imagePlaceholderBorderRadius,
+  imagePlaceholderBackground,
+  colorSelectorProperty1,
+  colorSelectorProperty11,
+  colorSelectorProperty12,
+  colorSelectorProperty13,
+  colorSelectorProperty14,
+  colorSelectorRectangleBoxBackground,
+  colorSelectorRectangleBoxBackground1,
+  colorSelectorRectangleBoxBackground2,
+  colorSelectorRectangleBoxBackground3,
+  colorSelectorRectangleBoxBackground4,
+}) => {
+  const productCardHomeStyle: CSSProperties = useMemo(() => {
+    return {
+      flex: productCardHomeFlex,
+      width: productCardHomeWidth,
+    };
+  }, [productCardHomeFlex, productCardHomeWidth]);
+
+  return (
+    <Box
+      className={`flex-1 rounded-Border-Radius-l bg-Base-Colors-productcard-base-white border-Border-or-seperators-Colors-Productcard-stroke-grey border-solid border-[1px] flex flex-col items-start justify-start gap-Spacing-m text-left text-Typography-Font-Sizes-p text-Texts-Colors-text-dark font-Typography-Font-Family-Primary ${className}`}
+      data-property1={property1}
+      style={productCardHomeStyle}
+    >
+      <Box className="self-stretch flex flex-col items-center justify-start">
+        <Box className="w-[260px] flex flex-col items-start justify-start !p-3 box-border">
+          <DiscoutnTag property1={property11} />
+        </Box>
+        <ImagePlaceholder
+          property1={property12}
+          text={text}
+          label={label}
+          icon={icon}
+          lines={lines}
+          imagePlaceholderWidth={imagePlaceholderWidth}
+          imagePlaceholderHeight={imagePlaceholderHeight}
+          imagePlaceholderBorder={imagePlaceholderBorder}
+          imagePlaceholderBorderRadius={imagePlaceholderBorderRadius}
+          imagePlaceholderBackgroundColor={imagePlaceholderBackground}
+          lines1="/lines-9.svg"
+        />
+      </Box>
+      <Box className="self-stretch flex flex-col items-start justify-start !pt-0 !pb-Spacing-m !pl-Spacing-m !pr-Spacing-m gap-Spacing-xm">
+        <Box className="self-stretch flex flex-col items-start justify-start gap-Spacing-xm">
+          <Typography
+            className="self-stretch relative overflow-hidden text-ellipsis whitespace-nowrap"
+            variant="inherit"
+            variantMapping={{ inherit: "b" }}
+            sx={{ lineHeight: "18px", fontWeight: "700" }}
+          >
+            iPhone 14 Pro Max
+          </Typography>
+          <Box className="self-stretch flex flex-row items-center justify-start gap-2">
+            <div className="relative leading-Typography-Line-Height-p">
+              From
+            </div>
+            <Typography
+              className="w-[87.6px] relative inline-block"
+              variant="inherit"
+              variantMapping={{ inherit: "b" }}
+              sx={{ lineHeight: "18px", fontWeight: "700" }}
+            >{`2,349 AED `}</Typography>
+          </Box>
+        </Box>
+        <Box className="self-stretch flex flex-row items-center justify-start gap-Spacing-xs text-center text-Border-or-seperators-Colors-button-stroke-grey">
+          <ColorSelector
+            property1={colorSelectorProperty1}
+            rectangleBoxBackgroundColor={colorSelectorRectangleBoxBackground}
+          />
+          <ColorSelector
+            property1={colorSelectorProperty11}
+            rectangleBoxBackgroundColor={colorSelectorRectangleBoxBackground1}
+          />
+          <ColorSelector
+            property1={colorSelectorProperty12}
+            rectangleBoxBackgroundColor={colorSelectorRectangleBoxBackground2}
+          />
+          <ColorSelector
+            property1={colorSelectorProperty13}
+            rectangleBoxBackgroundColor={colorSelectorRectangleBoxBackground3}
+          />
+          <ColorSelector
+            property1={colorSelectorProperty14}
+            rectangleBoxBackgroundColor={colorSelectorRectangleBoxBackground4}
+          />
+          <div className="relative leading-Typography-Line-Height-p font-semibold">
+            +5
+          </div>
+        </Box>
+      </Box>
+    </Box>
+  );
+};
+
+export default ProductCardHome;
