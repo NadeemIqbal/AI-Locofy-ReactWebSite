@@ -2,6 +2,10 @@ import { FunctionComponent } from "react";
 import { Typography, Box } from "@mui/material";
 import ExtraSmallButton from "./ExtraSmallButton";
 import ProductCardHome from "./ProductCardHome";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 export type PopularIPhoneContainerType = {
   className?: string;
@@ -41,92 +45,71 @@ const PopularIPhoneContainer: FunctionComponent<PopularIPhoneContainerType> = ({
             </Typography>
           </Typography>
         </Box>
-        <section className="self-stretch flex-1 rounded-tl-none rounded-tr-Border-Radius-2xl rounded-br-Border-Radius-2xl rounded-bl-none bg-Base-Colors-base-grey flex flex-row items-center justify-center !pt-Spacing-3xl !pb-Spacing-3xl !pl-Spacing-3xl !pr-7 box-border gap-4 min-w-[572px] z-[1] mq450:!pt-[26px] mq450:!pb-[26px] mq450:box-border mq450:grid-cols-[minmax(195px,_1fr)] mq800:justify-center mq800:grid-cols-[repeat(2,_minmax(195px,_338px))] mq800:min-w-full mq1125:flex-wrap">
-          <ProductCardHome
-            property1="Default"
-            productCardHomeFlex="unset"
-            productCardHomeWidth="260px"
-            property11="Default"
-            property12="Default"
-            text="Image Placeholder"
-            label
-            icon={false}
-            lines
-            imagePlaceholderWidth="212px"
-            imagePlaceholderHeight="146px"
-            imagePlaceholderBorder="1px solid #000"
-            imagePlaceholderBorderRadius="unset"
-            imagePlaceholderBackground="unset"
-            colorSelectorProperty1="Default"
-            colorSelectorProperty11="Default"
-            colorSelectorProperty12="Default"
-            colorSelectorProperty13="Default"
-            colorSelectorProperty14="Default"
-            colorSelectorRectangleBoxBackground="#a72627"
-            colorSelectorRectangleBoxBackground1="#3b667f"
-            colorSelectorRectangleBoxBackground2="#f6c3cc"
-            colorSelectorRectangleBoxBackground3="#121212"
-            colorSelectorRectangleBoxBackground4="#eddec9"
-          />
-          <ProductCardHome
-            property1="Default"
-            productCardHomeFlex="unset"
-            productCardHomeWidth="260px"
-            property11="Default"
-            property12="Default"
-            text="Image Placeholder"
-            label
-            icon={false}
-            lines
-            imagePlaceholderWidth="212px"
-            imagePlaceholderHeight="146px"
-            imagePlaceholderBorder="1px solid #000"
-            imagePlaceholderBorderRadius="unset"
-            imagePlaceholderBackground="unset"
-            colorSelectorProperty1="Default"
-            colorSelectorProperty11="Default"
-            colorSelectorProperty12="Default"
-            colorSelectorProperty13="Default"
-            colorSelectorProperty14="Default"
-            colorSelectorRectangleBoxBackground="#a72627"
-            colorSelectorRectangleBoxBackground1="#3b667f"
-            colorSelectorRectangleBoxBackground2="#f6c3cc"
-            colorSelectorRectangleBoxBackground3="#121212"
-            colorSelectorRectangleBoxBackground4="#eddec9"
-          />
-          <ProductCardHome
-            property1="Default"
-            productCardHomeFlex="unset"
-            productCardHomeWidth="260px"
-            property11="Default"
-            property12="Default"
-            text="Image Placeholder"
-            label
-            icon={false}
-            lines
-            imagePlaceholderWidth="212px"
-            imagePlaceholderHeight="146px"
-            imagePlaceholderBorder="1px solid #000"
-            imagePlaceholderBorderRadius="unset"
-            imagePlaceholderBackground="unset"
-            colorSelectorProperty1="Default"
-            colorSelectorProperty11="Default"
-            colorSelectorProperty12="Default"
-            colorSelectorProperty13="Default"
-            colorSelectorProperty14="Default"
-            colorSelectorRectangleBoxBackground="#a72627"
-            colorSelectorRectangleBoxBackground1="#3b667f"
-            colorSelectorRectangleBoxBackground2="#f6c3cc"
-            colorSelectorRectangleBoxBackground3="#121212"
-            colorSelectorRectangleBoxBackground4="#eddec9"
-          />
+        <section className="self-stretch flex-1 rounded-tl-none rounded-tr-Border-Radius-2xl rounded-br-Border-Radius-2xl rounded-bl-none bg-Base-Colors-base-grey flex flex-row items-center justify-center !pt-Spacing-3xl !pb-Spacing-3xl !pl-Spacing-3xl !pr-7 box-border gap-4 min-w-[572px] z-[1] mq450:!pt-[26px] mq450:!pb-[26px] mq450:box-border mq450:grid-cols-[minmax(195px,_1fr)] mq800:justify-center mq800:grid-cols-[repeat(2,_minmax(195px,_338px))] mq800:min-w-full mq1125:flex-wrap relative">
+          <Swiper
+            spaceBetween={16}
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1280: { slidesPerView: 4 },
+              1536: { slidesPerView: 5 },
+            }}
+            className="w-full popular-iphone-swiper"
+            modules={[Navigation]}
+            navigation={{
+              nextEl: '.popular-iphone-next',
+              prevEl: '.popular-iphone-prev'
+            }}
+          >
+            {[...Array(10)].map((_, idx) => (
+              <SwiperSlide key={idx}>
+                <ProductCardHome
+                  property1="Default"
+                  productCardHomeFlex="unset"
+                  productCardHomeWidth="260px"
+                  property11="Default"
+                  property12="Default"
+                  text={`Image Placeholder ${idx + 1}`}
+                  label
+                  icon={false}
+                  lines
+                  imagePlaceholderWidth="212px"
+                  imagePlaceholderHeight="146px"
+                  imagePlaceholderBorder="1px solid #000"
+                  imagePlaceholderBorderRadius="unset"
+                  imagePlaceholderBackground="unset"
+                  colorSelectorProperty1="Default"
+                  colorSelectorProperty11="Default"
+                  colorSelectorProperty12="Default"
+                  colorSelectorProperty13="Default"
+                  colorSelectorProperty14="Default"
+                  colorSelectorRectangleBoxBackground="#a72627"
+                  colorSelectorRectangleBoxBackground1="#3b667f"
+                  colorSelectorRectangleBoxBackground2="#f6c3cc"
+                  colorSelectorRectangleBoxBackground3="#121212"
+                  colorSelectorRectangleBoxBackground4="#eddec9"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <button
+            className="popular-iphone-prev custom-swiper-nav swiper-button-prev absolute top-1/2 left-7 -translate-y-1/2 z-[2] w-10 h-10 flex items-center justify-center bg-transparent border-none p-0"
+            aria-label="Previous"
+            type="button"
+            style={{ background: 'transparent', border: 'none', padding: 0 }}
+          >
+            <img src="/categories-arrow-button.svg" alt="Previous" className="w-10 h-10 rotate-180" />
+          </button>
+          <button
+            className="popular-iphone-next custom-swiper-nav swiper-button-next absolute top-1/2 right-7 -translate-y-1/2 z-[2] w-10 h-10 flex items-center justify-center bg-transparent border-none p-0"
+            aria-label="Next"
+            type="button"
+            style={{ background: 'transparent', border: 'none', padding: 0 }}
+          >
+            <img src="/categories-arrow-button.svg" alt="Next" className="w-10 h-10" />
+          </button>
         </section>
-        <img
-          className="h-[42px] w-[42px] absolute !!m-[0 important] top-[179px] left-[1339px] rounded-[22px] z-[2]"
-          loading="lazy"
-          alt=""
-          src="/categories-arrow-button.svg"
-        />
       </Box>
     </section>
   );

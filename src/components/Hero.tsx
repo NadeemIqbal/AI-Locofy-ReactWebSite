@@ -9,23 +9,25 @@ export type HeroType = {
 const Hero: FunctionComponent<HeroType> = ({ className = "" }) => {
   return (
     <section
-      className={`flex flex-col items-start justify-start text-center text-Typography-Font-Sizes-h3 text-Texts-Colors-text-light font-Typography-Font-Family-Primary ${className}`}
+      className={`w-full flex flex-col items-center justify-start text-center text-Typography-Font-Sizes-h3 text-Texts-Colors-text-light font-Typography-Font-Family-Primary ${className}`}
     >
-      <Box className="w-[1440px] h-[360px] flex flex-col items-start justify-start !pt-[101px] !pb-[101px] !pl-[526px] !pr-[526px] box-border bg-[url('/public/hero-banner-container@3x.png')] bg-cover bg-no-repeat bg-[top] mq450:!pt-[66px] mq450:!pb-[66px] mq450:!pl-5 mq450:!pr-5 mq450:box-border mq800:!pl-[263px] mq800:!pr-[263px] mq800:box-border">
-        <Box className="w-[388px] flex flex-col items-center justify-start gap-Spacing-xl">
+      <Box
+        className="w-full min-h-[300px] flex flex-col items-center justify-center box-border bg-[url('/hero-banner-container@3x.png')] bg-cover bg-no-repeat bg-center px-4 py-16 md:py-24 lg:py-32"
+      >
+        <Box className="max-w-xl w-full flex flex-col items-center justify-center gap-Spacing-xl">
           <Typography
-            className="!m-0 self-stretch relative mq450:text-[22px] mq450:leading-[27px]"
+            className="!m-0 self-stretch relative text-3xl md:text-4xl lg:text-5xl font-bold"
             variant="inherit"
             variantMapping={{ inherit: "h1" }}
-            sx={{ fontWeight: "700", lineHeight: "34px" }}
+            sx={{ fontWeight: "700", lineHeight: "1.2" }}
           >
             Revibed Electronics
           </Typography>
           <Typography
-            className="!m-0 w-[396.7px] relative inline-block mq450:text-[22px] mq450:leading-[27px]"
+            className="!m-0 w-full relative inline-block text-lg md:text-xl lg:text-2xl"
             variant="inherit"
             variantMapping={{ inherit: "h2" }}
-            sx={{ lineHeight: "34px" }}
+            sx={{ lineHeight: "1.2" }}
           >
             <Typography variant="inherit" variantMapping={{ inherit: "span" }}>
               Like
@@ -59,7 +61,7 @@ const Hero: FunctionComponent<HeroType> = ({ className = "" }) => {
           </Button>
         </Box>
       </Box>
-      <Box className="w-[1440px] bg-Base-Colors-base-grey flex flex-row items-center justify-between !pt-0 !pb-0 !pl-Spacing-3xl !pr-Spacing-3xl box-border gap-0 text-left text-Typography-Font-Sizes-p text-Texts-Colors-text-dark">
+      <Box className="w-full bg-Base-Colors-base-grey flex flex-row flex-wrap items-center justify-between px-4 md:px-12 box-border gap-4 text-left text-Typography-Font-Sizes-p text-Texts-Colors-text-dark">
         <Box className="flex flex-row items-center justify-start gap-Spacing-3xl mq800:gap-5 mq800:flex-wrap">
           <Usp
             monthWarranty="/12-month-warranty.svg"

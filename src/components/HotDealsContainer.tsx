@@ -2,6 +2,10 @@ import { FunctionComponent } from "react";
 import { Typography, Box } from "@mui/material";
 import ExtraSmallButton from "./ExtraSmallButton";
 import ProductCardHome from "./ProductCardHome";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 export type HotDealsContainerType = {
   className?: string;
@@ -43,137 +47,258 @@ const HotDealsContainer: FunctionComponent<HotDealsContainerType> = ({
           </Box>
           <ExtraSmallButton />
         </Box>
-        <Box className="self-stretch flex flex-row items-center justify-center gap-[15px] mq1350:flex-wrap">
-          <ProductCardHome
-            property1="Default"
-            property11="Default"
-            property12="Default"
-            text="Image Placeholder"
-            label
-            icon={false}
-            lines
-            colorSelectorProperty1="Default"
-            colorSelectorProperty11="Default"
-            colorSelectorProperty12="Default"
-            colorSelectorProperty13="Default"
-            colorSelectorProperty14="Default"
-            colorSelectorRectangleBoxBackground1="#3b667f"
-            colorSelectorRectangleBoxBackground2="#f6c3cc"
-            colorSelectorRectangleBoxBackground3="#121212"
-            colorSelectorRectangleBoxBackground4="#eddec9"
-          />
-          <ProductCardHome
-            property1="Default"
-            productCardHomeFlex="1"
-            productCardHomeWidth="unset"
-            property11="Default"
-            property12="Default"
-            text="Image Placeholder"
-            label
-            icon={false}
-            lines
-            imagePlaceholderWidth="212px"
-            imagePlaceholderHeight="146px"
-            imagePlaceholderBorder="1px solid #000"
-            imagePlaceholderBorderRadius="unset"
-            imagePlaceholderBackground="unset"
-            colorSelectorProperty1="Default"
-            colorSelectorProperty11="Default"
-            colorSelectorProperty12="Default"
-            colorSelectorProperty13="Default"
-            colorSelectorProperty14="Default"
-            colorSelectorRectangleBoxBackground="#a72627"
-            colorSelectorRectangleBoxBackground1="#3b667f"
-            colorSelectorRectangleBoxBackground2="#f6c3cc"
-            colorSelectorRectangleBoxBackground3="#121212"
-            colorSelectorRectangleBoxBackground4="#eddec9"
-          />
-          <ProductCardHome
-            property1="Default"
-            productCardHomeFlex="1"
-            productCardHomeWidth="unset"
-            property11="Default"
-            property12="Default"
-            text="Image Placeholder"
-            label
-            icon={false}
-            lines
-            imagePlaceholderWidth="212px"
-            imagePlaceholderHeight="146px"
-            imagePlaceholderBorder="1px solid #000"
-            imagePlaceholderBorderRadius="unset"
-            imagePlaceholderBackground="unset"
-            colorSelectorProperty1="Default"
-            colorSelectorProperty11="Default"
-            colorSelectorProperty12="Default"
-            colorSelectorProperty13="Default"
-            colorSelectorProperty14="Default"
-            colorSelectorRectangleBoxBackground="#a72627"
-            colorSelectorRectangleBoxBackground1="#3b667f"
-            colorSelectorRectangleBoxBackground2="#f6c3cc"
-            colorSelectorRectangleBoxBackground3="#121212"
-            colorSelectorRectangleBoxBackground4="#eddec9"
-          />
-          <ProductCardHome
-            property1="Default"
-            productCardHomeFlex="1"
-            productCardHomeWidth="unset"
-            property11="Default"
-            property12="Default"
-            text="Image Placeholder"
-            label
-            icon={false}
-            lines
-            imagePlaceholderWidth="212px"
-            imagePlaceholderHeight="146px"
-            imagePlaceholderBorder="1px solid #000"
-            imagePlaceholderBorderRadius="unset"
-            imagePlaceholderBackground="unset"
-            colorSelectorProperty1="Default"
-            colorSelectorProperty11="Default"
-            colorSelectorProperty12="Default"
-            colorSelectorProperty13="Default"
-            colorSelectorProperty14="Default"
-            colorSelectorRectangleBoxBackground="#a72627"
-            colorSelectorRectangleBoxBackground1="#3b667f"
-            colorSelectorRectangleBoxBackground2="#f6c3cc"
-            colorSelectorRectangleBoxBackground3="#121212"
-            colorSelectorRectangleBoxBackground4="#eddec9"
-          />
-          <ProductCardHome
-            property1="Default"
-            productCardHomeFlex="1"
-            productCardHomeWidth="unset"
-            property11="Default"
-            property12="Default"
-            text="Image Placeholder"
-            label
-            icon={false}
-            lines
-            imagePlaceholderWidth="212px"
-            imagePlaceholderHeight="146px"
-            imagePlaceholderBorder="1px solid #000"
-            imagePlaceholderBorderRadius="unset"
-            imagePlaceholderBackground="unset"
-            colorSelectorProperty1="Default"
-            colorSelectorProperty11="Default"
-            colorSelectorProperty12="Default"
-            colorSelectorProperty13="Default"
-            colorSelectorProperty14="Default"
-            colorSelectorRectangleBoxBackground="#a72627"
-            colorSelectorRectangleBoxBackground1="#3b667f"
-            colorSelectorRectangleBoxBackground2="#f6c3cc"
-            colorSelectorRectangleBoxBackground3="#121212"
-            colorSelectorRectangleBoxBackground4="#eddec9"
-          />
+        <Box className="self-stretch relative">
+          <Swiper
+            spaceBetween={15}
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1280: { slidesPerView: 4 },
+              1536: { slidesPerView: 5 },
+            }}
+            className="w-full hotdeals-swiper"
+            modules={[Navigation]}
+            navigation={{
+              nextEl: '.hotdeals-next',
+              prevEl: '.hotdeals-prev'
+            }}
+          >
+            <SwiperSlide>
+              <ProductCardHome
+                property1="Default"
+                property11="Default"
+                property12="Default"
+                text="Image Placeholder"
+                label
+                icon={false}
+                lines
+                colorSelectorProperty1="Default"
+                colorSelectorProperty11="Default"
+                colorSelectorProperty12="Default"
+                colorSelectorProperty13="Default"
+                colorSelectorProperty14="Default"
+                colorSelectorRectangleBoxBackground1="#3b667f"
+                colorSelectorRectangleBoxBackground2="#f6c3cc"
+                colorSelectorRectangleBoxBackground3="#121212"
+                colorSelectorRectangleBoxBackground4="#eddec9"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductCardHome
+                property1="Default"
+                productCardHomeFlex="1"
+                productCardHomeWidth="unset"
+                property11="Default"
+                property12="Default"
+                text="Image Placeholder"
+                label
+                icon={false}
+                lines
+                imagePlaceholderWidth="212px"
+                imagePlaceholderHeight="146px"
+                imagePlaceholderBorder="1px solid #000"
+                imagePlaceholderBorderRadius="unset"
+                imagePlaceholderBackground="unset"
+                colorSelectorProperty1="Default"
+                colorSelectorProperty11="Default"
+                colorSelectorProperty12="Default"
+                colorSelectorProperty13="Default"
+                colorSelectorProperty14="Default"
+                colorSelectorRectangleBoxBackground="#a72627"
+                colorSelectorRectangleBoxBackground1="#3b667f"
+                colorSelectorRectangleBoxBackground2="#f6c3cc"
+                colorSelectorRectangleBoxBackground3="#121212"
+                colorSelectorRectangleBoxBackground4="#eddec9"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductCardHome
+                property1="Default"
+                productCardHomeFlex="1"
+                productCardHomeWidth="unset"
+                property11="Default"
+                property12="Default"
+                text="Image Placeholder"
+                label
+                icon={false}
+                lines
+                imagePlaceholderWidth="212px"
+                imagePlaceholderHeight="146px"
+                imagePlaceholderBorder="1px solid #000"
+                imagePlaceholderBorderRadius="unset"
+                imagePlaceholderBackground="unset"
+                colorSelectorProperty1="Default"
+                colorSelectorProperty11="Default"
+                colorSelectorProperty12="Default"
+                colorSelectorProperty13="Default"
+                colorSelectorProperty14="Default"
+                colorSelectorRectangleBoxBackground="#a72627"
+                colorSelectorRectangleBoxBackground1="#3b667f"
+                colorSelectorRectangleBoxBackground2="#f6c3cc"
+                colorSelectorRectangleBoxBackground3="#121212"
+                colorSelectorRectangleBoxBackground4="#eddec9"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductCardHome
+                property1="Default"
+                productCardHomeFlex="1"
+                productCardHomeWidth="unset"
+                property11="Default"
+                property12="Default"
+                text="Image Placeholder"
+                label
+                icon={false}
+                lines
+                imagePlaceholderWidth="212px"
+                imagePlaceholderHeight="146px"
+                imagePlaceholderBorder="1px solid #000"
+                imagePlaceholderBorderRadius="unset"
+                imagePlaceholderBackground="unset"
+                colorSelectorProperty1="Default"
+                colorSelectorProperty11="Default"
+                colorSelectorProperty12="Default"
+                colorSelectorProperty13="Default"
+                colorSelectorProperty14="Default"
+                colorSelectorRectangleBoxBackground="#a72627"
+                colorSelectorRectangleBoxBackground1="#3b667f"
+                colorSelectorRectangleBoxBackground2="#f6c3cc"
+                colorSelectorRectangleBoxBackground3="#121212"
+                colorSelectorRectangleBoxBackground4="#eddec9"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductCardHome
+                property1="Default"
+                productCardHomeFlex="1"
+                productCardHomeWidth="unset"
+                property11="Default"
+                property12="Default"
+                text="Image Placeholder"
+                label
+                icon={false}
+                lines
+                imagePlaceholderWidth="212px"
+                imagePlaceholderHeight="146px"
+                imagePlaceholderBorder="1px solid #000"
+                imagePlaceholderBorderRadius="unset"
+                imagePlaceholderBackground="unset"
+                colorSelectorProperty1="Default"
+                colorSelectorProperty11="Default"
+                colorSelectorProperty12="Default"
+                colorSelectorProperty13="Default"
+                colorSelectorProperty14="Default"
+                colorSelectorRectangleBoxBackground="#a72627"
+                colorSelectorRectangleBoxBackground1="#3b667f"
+                colorSelectorRectangleBoxBackground2="#f6c3cc"
+                colorSelectorRectangleBoxBackground3="#121212"
+                colorSelectorRectangleBoxBackground4="#eddec9"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductCardHome
+                property1="Default"
+                productCardHomeFlex="1"
+                productCardHomeWidth="unset"
+                property11="Default"
+                property12="Default"
+                text="Image Placeholder"
+                label
+                icon={false}
+                lines
+                imagePlaceholderWidth="212px"
+                imagePlaceholderHeight="146px"
+                imagePlaceholderBorder="1px solid #000"
+                imagePlaceholderBorderRadius="unset"
+                imagePlaceholderBackground="unset"
+                colorSelectorProperty1="Default"
+                colorSelectorProperty11="Default"
+                colorSelectorProperty12="Default"
+                colorSelectorProperty13="Default"
+                colorSelectorProperty14="Default"
+                colorSelectorRectangleBoxBackground="#a72627"
+                colorSelectorRectangleBoxBackground1="#3b667f"
+                colorSelectorRectangleBoxBackground2="#f6c3cc"
+                colorSelectorRectangleBoxBackground3="#121212"
+                colorSelectorRectangleBoxBackground4="#eddec9"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductCardHome
+                property1="Default"
+                productCardHomeFlex="1"
+                productCardHomeWidth="unset"
+                property11="Default"
+                property12="Default"
+                text="Image Placeholder"
+                label
+                icon={false}
+                lines
+                imagePlaceholderWidth="212px"
+                imagePlaceholderHeight="146px"
+                imagePlaceholderBorder="1px solid #000"
+                imagePlaceholderBorderRadius="unset"
+                imagePlaceholderBackground="unset"
+                colorSelectorProperty1="Default"
+                colorSelectorProperty11="Default"
+                colorSelectorProperty12="Default"
+                colorSelectorProperty13="Default"
+                colorSelectorProperty14="Default"
+                colorSelectorRectangleBoxBackground="#a72627"
+                colorSelectorRectangleBoxBackground1="#3b667f"
+                colorSelectorRectangleBoxBackground2="#f6c3cc"
+                colorSelectorRectangleBoxBackground3="#121212"
+                colorSelectorRectangleBoxBackground4="#eddec9"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductCardHome
+                property1="Default"
+                productCardHomeFlex="1"
+                productCardHomeWidth="unset"
+                property11="Default"
+                property12="Default"
+                text="Image Placeholder"
+                label
+                icon={false}
+                lines
+                imagePlaceholderWidth="212px"
+                imagePlaceholderHeight="146px"
+                imagePlaceholderBorder="1px solid #000"
+                imagePlaceholderBorderRadius="unset"
+                imagePlaceholderBackground="unset"
+                colorSelectorProperty1="Default"
+                colorSelectorProperty11="Default"
+                colorSelectorProperty12="Default"
+                colorSelectorProperty13="Default"
+                colorSelectorProperty14="Default"
+                colorSelectorRectangleBoxBackground="#a72627"
+                colorSelectorRectangleBoxBackground1="#3b667f"
+                colorSelectorRectangleBoxBackground2="#f6c3cc"
+                colorSelectorRectangleBoxBackground3="#121212"
+                colorSelectorRectangleBoxBackground4="#eddec9"
+              />
+            </SwiperSlide>
+          </Swiper>
+          <button
+            className="hotdeals-prev custom-swiper-nav swiper-button-prev absolute top-1/2 left-7 -translate-y-1/2 z-[2] w-10 h-10 flex items-center justify-center bg-transparent border-none p-0"
+            aria-label="Previous"
+            type="button"
+            style={{ background: 'transparent', border: 'none', padding: 0 }}
+          >
+            <img src="/categories-arrow-button.svg" alt="Previous" className="w-10 h-10 rotate-180" />
+          </button>
+          <button
+            className="hotdeals-next custom-swiper-nav swiper-button-next absolute top-1/2 right-7 -translate-y-1/2 z-[2] w-10 h-10 flex items-center justify-center bg-transparent border-none p-0"
+            aria-label="Next"
+            type="button"
+            style={{ background: 'transparent', border: 'none', padding: 0 }}
+          >
+            <img src="/categories-arrow-button.svg" alt="Next" className="w-10 h-10" />
+          </button>
         </Box>
       </section>
-      <img
-        className="w-[42px] h-[42px] absolute !!m-[0 important] top-[calc(50%_+_6px)] right-[19px] rounded-[22px] z-[1]"
-        loading="lazy"
-        alt=""
-        src="/categories-arrow-button.svg"
-      />
     </section>
   );
 };

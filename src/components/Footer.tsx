@@ -9,8 +9,8 @@ export type FooterType = {
 
 const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
   return (
-    <section
-      className={`w-[1440px] flex flex-col items-start justify-start max-w-full text-left text-Typography-Font-Sizes-p text-Texts-Colors-text-light font-Typography-Font-Family-Primary ${className}`}
+    <footer
+      className={`w-full bg-Texts-Colors-text-dark flex flex-col items-center justify-center px-4 md:px-12 pt-Spacing-3xl pb-Spacing-3xl box-border text-left text-Typography-Font-Sizes-p text-Base-Colors-tag-base-white font-Typography-Font-Family-Primary ${className}`}
     >
       <Box className="self-stretch bg-Base-Colors-base-dark border-Border-or-seperators-Colors-common-seperator-dark border-solid border-b-[1px] box-border flex flex-col items-start justify-start !pt-Spacing-3xl !pb-[38px] !pl-Spacing-3xl !pr-Spacing-3xl gap-Spacing-2xl max-w-full mq450:!pt-[26px] mq450:!pb-[25px] mq450:box-border mq800:gap-4">
         <section className="self-stretch flex flex-row items-start justify-start gap-[147px] text-left text-Typography-Font-Sizes-p text-Texts-Colors-text-light font-Typography-Font-Family-Primary mq450:gap-[18px] mq800:gap-[37px] mq1350:gap-[73px] mq1350:flex-wrap">
@@ -129,7 +129,7 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
           />
         </Box>
       </section>
-    </section>
+    </footer>
   );
 };
 

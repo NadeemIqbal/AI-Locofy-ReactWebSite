@@ -11,9 +11,9 @@ const DevicesVerifiedContainer: FunctionComponent<
 > = ({ className = "" }) => {
   return (
     <main
-      className={`w-[1440px] bg-Base-Colors-base-light flex flex-col items-start justify-start !pt-Spacing-3xl !pb-0 !pl-Spacing-3xl !pr-Spacing-3xl box-border shrink-0 max-w-full text-center text-Typography-Font-Sizes-h3 font-Typography-Font-Family-Primary ${className}`}
+      className={`w-full bg-Base-Colors-base-light flex flex-col items-start justify-start !pt-Spacing-3xl !pb-0 px-4 md:px-12 box-border shrink-0 max-w-full text-center text-Typography-Font-Sizes-h3 font-Typography-Font-Family-Primary ${className}`}
     >
-      <Box className="self-stretch rounded-xl bg-Base-Colors-base-light-violet flex flex-col items-center justify-center !pt-Spacing-2xl !pb-Spacing-2xl !pl-Spacing-5xl !pr-Spacing-5xl box-border max-w-full mq800:!pt-[21px] mq800:!pb-[21px] mq800:box-border mq1350:!pl-7 mq1350:!pr-7 mq1350:box-border">
+      <Box className="self-stretch rounded-xl bg-Base-Colors-base-light-violet flex flex-col items-center justify-center !pt-Spacing-2xl !pb-Spacing-2xl px-4 md:px-16 box-border max-w-full mq800:!pt-[21px] mq800:!pb-[21px] mq800:box-border mq1350:px-7 mq1350:box-border">
         <Box className="self-stretch flex flex-col items-center justify-start gap-Spacing-2xl max-w-full mq800:gap-4">
           <Typography
             className="!m-0 self-stretch relative mq450:text-[22px] mq450:leading-[27px]"

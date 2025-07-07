@@ -19,8 +19,7 @@ const HomeForLocofy: FunctionComponent = () => {
       <HotDealsContainer />
       <PopularIPhoneContainer />
       <DevicesVerifiedContainer />
-      <CustomerLoveContainer />
-      <Box className="w-[1440px] bg-Base-Colors-base-grey flex flex-row items-center justify-between !pt-0 !pb-0 !pl-Spacing-3xl !pr-Spacing-3xl box-border gap-0">
+      <Box className="w-full bg-Base-Colors-base-grey flex flex-row items-center justify-between !pt-0 !pb-0 px-4 md:px-12 box-border gap-0 mt-0">
         <Box className="flex flex-row items-center justify-start gap-Spacing-3xl mq800:gap-5 mq800:flex-wrap">
           <Usp
             monthWarranty="/12-month-warranty.svg"

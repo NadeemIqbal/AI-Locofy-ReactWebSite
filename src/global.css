@@ -17,3 +17,45 @@ body {
     border-width: 0;
   }
 }
+
+.custom-swiper-nav {
+  background: #fff;
+  border: 1px solid #bdbdbd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  padding: 0;
+  transition: border-color 0.2s;
+  outline: none;
+}
+.custom-swiper-nav:focus,
+.custom-swiper-nav:active {
+  outline: none !important;
+  border-color: #bdbdbd !important;
+  box-shadow: none !important;
+}
+.custom-swiper-nav svg {
+  stroke: #444 !important;
+  color: #444 !important;
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: 0 auto;
+}
+.custom-swiper-nav:disabled,
+.custom-swiper-nav.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.custom-swiper-nav:hover {
+  border-color: #888;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none !important;
+}
