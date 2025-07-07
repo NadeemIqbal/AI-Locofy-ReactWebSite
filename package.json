@@ -1,4 +1,8 @@
 {
+  "name": "design_to_web_ai_rnd_-_1",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://nadeemiqbal.github.io/AI-Locofy-ReactWebSite",
   "browserslist": {
     "development": [
       "last 1 chrome version",
@@ -21,6 +25,7 @@
     "@types/jest": "^29.5.14",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "gh-pages": "^6.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.5.0",
@@ -42,13 +47,12 @@
   "eslintConfig": {
     "root": true
   },
-  "name": "design_to_web_ai_rnd_-_1",
-  "private": true,
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "start": "vite"
-  },
-  "version": "0.1.0"
+    "start": "vite",
+    "predeploy": "vite build",
+    "deploy": "gh-pages -d dist"
+  }
 }
