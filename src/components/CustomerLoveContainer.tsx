@@ -39,7 +39,7 @@ const CustomerLoveContainer: FunctionComponent<CustomerLoveContainerType> = ({
                 className="w-full h-full absolute !!m-[0 important] top-[0px] left-[0px] object-cover z-[0]"
                 loading="lazy"
                 alt=""
-                src="/rectangle@2x.png"
+                src={`${import.meta.env.BASE_URL}rectangle@2x.png`}
               />
               <Typography
                 className="!m-0 relative z-[1] mq450:text-[19px] mq450:leading-[23px] mq800:text-[26px] mq800:leading-[31px]"
@@ -58,10 +58,10 @@ const CustomerLoveContainer: FunctionComponent<CustomerLoveContainerType> = ({
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className="h-[421px] w-[262px] rounded-Border-Radius-2xl object-cover"
+              className="h-[421px] w-[400px] rounded-Border-Radius-2xl object-cover"
               loading="lazy"
               alt=""
-              src="/ugc-video@2x.png"
+              src={`${import.meta.env.BASE_URL}ugc-video@2x.png`}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -69,7 +69,7 @@ const CustomerLoveContainer: FunctionComponent<CustomerLoveContainerType> = ({
               className="h-[421px] w-[262px] rounded-Border-Radius-2xl object-cover"
               loading="lazy"
               alt=""
-              src="/ugc-video-1@2x.png"
+              src={`${import.meta.env.BASE_URL}ugc-video-1@2x.png`}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -77,7 +77,7 @@ const CustomerLoveContainer: FunctionComponent<CustomerLoveContainerType> = ({
               className="h-[421px] w-[262px] rounded-Border-Radius-2xl object-cover"
               loading="lazy"
               alt=""
-              src="/ugc-video-2@2x.png"
+              src={`${import.meta.env.BASE_URL}ugc-video-2@2x.png`}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -85,7 +85,7 @@ const CustomerLoveContainer: FunctionComponent<CustomerLoveContainerType> = ({
               className="h-[421px] w-[262px] rounded-Border-Radius-2xl object-cover"
               loading="lazy"
               alt=""
-              src="/ugc-video-3@2x.png"
+              src={`${import.meta.env.BASE_URL}ugc-video-3@2x.png`}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -93,7 +93,7 @@ const CustomerLoveContainer: FunctionComponent<CustomerLoveContainerType> = ({
               className="h-[421px] w-[262px] rounded-Border-Radius-2xl object-cover"
               loading="lazy"
               alt=""
-              src="/ugc-video-1@2x.png"
+              src={`${import.meta.env.BASE_URL}ugc-video-1@2x.png`}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -101,17 +101,17 @@ const CustomerLoveContainer: FunctionComponent<CustomerLoveContainerType> = ({
               className="h-[421px] w-[262px] rounded-Border-Radius-2xl object-cover"
               loading="lazy"
               alt=""
-              src="/ugc-video-2@2x.png"
+              src={`${import.meta.env.BASE_URL}ugc-video-2@2x.png`}
             />
           </SwiperSlide>
         </Swiper>
       </Box>
       <div className="absolute right-4 top-1/2 -translate-y-1/2 z-[2]">
         <img
-          className="h-[42px] w-[42px] rounded-[22px] cursor-pointer"
+          className="h-[42px] w-[42px] absolute !!m-[0 important] top-[calc(50%_-_21px)] right-[19px] rounded-[22px] z-[2]"
           loading="lazy"
           alt=""
-          src="/categories-arrow-button.svg"
+          src={`${import.meta.env.BASE_URL}categories-arrow-button.svg`}
         />
       </div>
     </section>

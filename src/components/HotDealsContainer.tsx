@@ -33,7 +33,7 @@ const HotDealsContainer: FunctionComponent<HotDealsContainerType> = ({
               <img
                 className="w-[18px] relative h-[18px] overflow-hidden shrink-0"
                 alt=""
-                src="/hotdealicon.svg"
+                src={`${import.meta.env.BASE_URL}hotdealicon.svg`}
               />
               <Typography
                 className="relative text-transparent !bg-clip-text [background:linear-gradient(180deg,_#7f19a0,_#c82d8c)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]"
@@ -287,7 +287,7 @@ const HotDealsContainer: FunctionComponent<HotDealsContainerType> = ({
             type="button"
             style={{ background: 'transparent', border: 'none', padding: 0 }}
           >
-            <img src="/categories-arrow-button.svg" alt="Previous" className="w-10 h-10 rotate-180" />
+            <img src={`${import.meta.env.BASE_URL}categories-arrow-button.svg`} alt="Previous" className="w-10 h-10 rotate-180" />
           </button>
           <button
             className="hotdeals-next custom-swiper-nav swiper-button-next absolute top-1/2 right-7 -translate-y-1/2 z-[2] w-10 h-10 flex items-center justify-center bg-transparent border-none p-0"
@@ -295,7 +295,7 @@ const HotDealsContainer: FunctionComponent<HotDealsContainerType> = ({
             type="button"
             style={{ background: 'transparent', border: 'none', padding: 0 }}
           >
-            <img src="/categories-arrow-button.svg" alt="Next" className="w-10 h-10" />
+            <img src={`${import.meta.env.BASE_URL}categories-arrow-button.svg`} alt="Next" className="w-10 h-10" />
           </button>
         </Box>
       </section>

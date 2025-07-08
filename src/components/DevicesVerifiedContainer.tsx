@@ -40,7 +40,7 @@ const DevicesVerifiedContainer: FunctionComponent<
               className="h-[361px] w-[420px] object-cover max-w-full"
               loading="lazy"
               alt=""
-              src="/image@2x.png"
+              src={`${import.meta.env.BASE_URL}image@2x.png`}
             />
             <Box className="w-[355px] flex flex-col items-center justify-start gap-Spacing-4xl max-w-full mq450:gap-6">
               <DevicesVerifiedItemContent
@@ -54,7 +54,7 @@ const DevicesVerifiedContainer: FunctionComponent<
                   className="w-12 h-12 relative"
                   loading="lazy"
                   alt=""
-                  src="/devices-verified-item-icon-3.svg"
+                  src={`${import.meta.env.BASE_URL}devices-verified-item-icon-3.svg`}
                 />
                 <Typography
                   className="self-stretch relative"

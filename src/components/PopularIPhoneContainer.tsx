@@ -1,3 +1,5 @@
+/// <reference types="vite/client" />
+
 import { FunctionComponent } from "react";
 import { Typography, Box } from "@mui/material";
 import ExtraSmallButton from "./ExtraSmallButton";
@@ -99,7 +101,7 @@ const PopularIPhoneContainer: FunctionComponent<PopularIPhoneContainerType> = ({
             type="button"
             style={{ background: 'transparent', border: 'none', padding: 0 }}
           >
-            <img src="/categories-arrow-button.svg" alt="Previous" className="w-10 h-10 rotate-180" />
+            <img src={`${import.meta.env.BASE_URL}categories-arrow-button.svg`} alt="Previous" className="w-10 h-10 rotate-180" />
           </button>
           <button
             className="popular-iphone-next custom-swiper-nav swiper-button-next absolute top-1/2 right-7 -translate-y-1/2 z-[2] w-10 h-10 flex items-center justify-center bg-transparent border-none p-0"
@@ -107,7 +109,7 @@ const PopularIPhoneContainer: FunctionComponent<PopularIPhoneContainerType> = ({
             type="button"
             style={{ background: 'transparent', border: 'none', padding: 0 }}
           >
-            <img src="/categories-arrow-button.svg" alt="Next" className="w-10 h-10" />
+            <img src={`${import.meta.env.BASE_URL}categories-arrow-button.svg`} alt="Next" className="w-10 h-10" />
           </button>
         </section>
       </Box>

@@ -85,18 +85,18 @@ const Hero: FunctionComponent<HeroType> = ({ className = "" }) => {
               <img
                 className="absolute h-[94.12%] w-full top-[0%] right-[0%] bottom-[5.88%] left-[0%] max-w-full overflow-hidden max-h-full"
                 alt=""
-                src="/vector.svg"
+                src={`${import.meta.env.BASE_URL}vector.svg`}
               />
               <img
                 className="absolute h-full w-[69.57%] top-[0%] right-[14.78%] bottom-[0%] left-[15.65%] max-w-full overflow-hidden max-h-full object-cover z-[1]"
                 alt=""
-                src="/buy-now-pay-later-logo@2x.png"
+                src={`${import.meta.env.BASE_URL}buy-now-pay-later-logo@2x.png`}
               />
             </Box>
             <img
               className="cursor-pointer [border:none] !p-0 bg-[transparent] absolute h-[94.12%] w-[45.99%] top-[0%] right-[0%] bottom-[5.88%] left-[54.01%] max-w-full overflow-hidden max-h-full object-cover mix-blend-luminosity"
               alt=""
-              src="/logo-badge2-1@2x.png"
+              src={`${import.meta.env.BASE_URL}logo-badge2-1@2x.png`}
             />
           </Box>
         </Box>

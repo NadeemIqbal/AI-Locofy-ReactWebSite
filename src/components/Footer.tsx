@@ -69,7 +69,7 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
               className="self-stretch max-w-full overflow-hidden max-h-full object-cover"
               loading="lazy"
               alt=""
-              src="/payment-wrapper@2x.png"
+              src={`${import.meta.env.BASE_URL}payment-wrapper@2x.png`}
             />
           </Box>
           <FooterLinks
@@ -119,13 +119,13 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
             className="w-12 rounded-[40px] max-h-full"
             loading="lazy"
             alt=""
-            src="/facebook-icon.svg"
+            src={`${import.meta.env.BASE_URL}facebook-icon.svg`}
           />
           <img
             className="w-12 rounded-[40px] max-h-full"
             loading="lazy"
             alt=""
-            src="/instagram-icon.svg"
+            src={`${import.meta.env.BASE_URL}instagram-icon.svg`}
           />
         </Box>
       </section>

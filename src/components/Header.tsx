@@ -53,7 +53,7 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
             slotProps={{
               input: {
                 endAdornment: (
-                  <img width="24px" height="24px" src="/search.svg" />
+                  <img width="24px" height="24px" src={`${import.meta.env.BASE_URL}search.svg`} />
                 ),
               },
             }}
@@ -127,7 +127,7 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
                 disableUnderline
                 displayEmpty
                 IconComponent={() => (
-                  <img width="12px" height="12px" src="/arrow.svg" style={{}} />
+                  <img width="12px" height="12px" src={`${import.meta.env.BASE_URL}arrow.svg`} style={{}} />
                 )}
               >
                 <MenuItem>العربية</MenuItem>
@@ -145,7 +145,7 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
                   UAE
                 </div>
               </Box>
-              <img className="h-3 w-3 relative" alt="" src="/arrow-1.svg" />
+              <img className="h-3 w-3 relative" alt="" src={`${import.meta.env.BASE_URL}arrow-1.svg`} />
             </Box>
             <img
               className="w-[34px] relative h-[34px] overflow-hidden shrink-0"
@@ -164,7 +164,7 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
             <img
               className="w-[18px] relative h-[18px] overflow-hidden shrink-0"
               alt=""
-              src="/hotdealicon.svg"
+              src={`${import.meta.env.BASE_URL}hotdealicon.svg`}
             />
           </Box>
           <div className="w-[56.6px] relative leading-Typography-Line-Height-p font-medium inline-block shrink-0">
