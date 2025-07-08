@@ -23,165 +23,169 @@ const Categories: FunctionComponent<CategoriesType> = ({ className = "" }) => {
       >
         Shop by Categories
       </Typography>
-      {/* Swipable Categories Row */}
-      <Swiper
-        spaceBetween={16}
-        slidesPerView={2}
-        breakpoints={{
-          640: { slidesPerView: 3 },
-          1024: { slidesPerView: 5 },
-          1280: { slidesPerView: 7 },
-        }}
-        className="w-full categories-swiper"
-        modules={[Navigation]}
-        navigation={{
-          nextEl: '.categories-next',
-          prevEl: '.categories-prev'
-        }}
-      >
-        <SwiperSlide>
-          <CategoryListItem
-            hotDeals="Hot Deals"
-            text="136 × 116"
-            label
-            icon={false}
-            lines
-            imagePlaceholderWidth="136px"
-            imagePlaceholderHeight="116px"
-            imagePlaceholderBorder="unset"
-            imagePlaceholderBorderRadius="1px"
-            imagePlaceholderBackground="#eee"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CategoryListItem
-            hotDeals="iPhone"
-            text="136 × 116"
-            label
-            icon={false}
-            lines
-            imagePlaceholderWidth="136px"
-            imagePlaceholderHeight="116px"
-            imagePlaceholderBorder="unset"
-            imagePlaceholderBorderRadius="1px"
-            imagePlaceholderBackground="#eee"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CategoryListItem
-            hotDeals="Samsung"
-            text="136 × 116"
-            label
-            icon={false}
-            lines
-            imagePlaceholderWidth="136px"
-            imagePlaceholderHeight="116px"
-            imagePlaceholderBorder="unset"
-            imagePlaceholderBorderRadius="1px"
-            imagePlaceholderBackground="#eee"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CategoryListItem
-            hotDeals="Macbooks"
-            text="136 × 116"
-            label
-            icon={false}
-            lines
-            imagePlaceholderWidth="136px"
-            imagePlaceholderHeight="116px"
-            imagePlaceholderBorder="unset"
-            imagePlaceholderBorderRadius="1px"
-            imagePlaceholderBackground="#eee"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CategoryListItem
-            hotDeals="Gaming"
-            text="136 × 116"
-            label
-            icon={false}
-            lines
-            imagePlaceholderWidth="136px"
-            imagePlaceholderHeight="116px"
-            imagePlaceholderBorder="unset"
-            imagePlaceholderBorderRadius="1px"
-            imagePlaceholderBackground="#eee"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CategoryListItem
-            hotDeals="Laptops"
-            text="136 × 116"
-            label
-            icon={false}
-            lines
-            imagePlaceholderWidth="136px"
-            imagePlaceholderHeight="116px"
-            imagePlaceholderBorder="unset"
-            imagePlaceholderBorderRadius="1px"
-            imagePlaceholderBackground="#eee"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CategoryListItem
-            hotDeals="iPads"
-            text="136 × 116"
-            label
-            icon={false}
-            lines
-            imagePlaceholderWidth="136px"
-            imagePlaceholderHeight="116px"
-            imagePlaceholderBorder="unset"
-            imagePlaceholderBorderRadius="1px"
-            imagePlaceholderBackground="#eee"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CategoryListItem
-            hotDeals="Apple Watches"
-            text="136 × 116"
-            label
-            icon={false}
-            lines
-            imagePlaceholderWidth="136px"
-            imagePlaceholderHeight="116px"
-            imagePlaceholderBorder="unset"
-            imagePlaceholderBorderRadius="1px"
-            imagePlaceholderBackground="#eee"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CategoryListItem
-            hotDeals="Accessories"
-            text="136 × 116"
-            label
-            icon={false}
-            lines
-            imagePlaceholderWidth="136px"
-            imagePlaceholderHeight="116px"
-            imagePlaceholderBorder="unset"
-            imagePlaceholderBorderRadius="1px"
-            imagePlaceholderBackground="#eee"
-          />
-        </SwiperSlide>
-      </Swiper>
-      <button
-        className="categories-prev custom-swiper-nav swiper-button-prev fixed-categories-arrow left-7 z-[2] w-10 h-10 flex items-center justify-center bg-transparent border-none p-0"
-        aria-label="Previous"
-        type="button"
-        style={{ background: 'transparent', border: 'none', padding: 0, top: '50%', transform: 'translateY(-50%)' }}
-      >
-        <img src={`${import.meta.env.BASE_URL}categories-arrow-button.svg`} alt="Previous" className="w-10 h-10 rotate-180" />
-      </button>
-      <button
-        className="categories-next custom-swiper-nav swiper-button-next fixed-categories-arrow right-7 z-[2] w-10 h-10 flex items-center justify-center bg-transparent border-none p-0"
-        aria-label="Next"
-        type="button"
-        style={{ background: 'transparent', border: 'none', padding: 0, top: '50%', transform: 'translateY(-50%)' }}
-      >
-        <img src={`${import.meta.env.BASE_URL}categories-arrow-button.svg`} alt="Next" className="w-10 h-10" />
-      </button>
+      {/* Swipable Categories Row with flex-aligned arrows */}
+      <div className="w-full flex flex-row items-center justify-center relative">
+        <button
+          className="categories-prev custom-swiper-nav swiper-button-prev mr-2 w-10 h-10 flex items-center justify-center bg-transparent border-none p-0"
+          aria-label="Previous"
+          type="button"
+          style={{ background: 'transparent', border: 'none', padding: 0 }}
+        >
+          <img src={`${import.meta.env.BASE_URL}categories-arrow-button.svg`} alt="Previous" className="w-10 h-10 rotate-180" />
+        </button>
+        <div className="flex-1">
+          <Swiper
+            spaceBetween={16}
+            slidesPerView={2}
+            breakpoints={{
+              640: { slidesPerView: 3 },
+              1024: { slidesPerView: 5 },
+              1280: { slidesPerView: 7 },
+            }}
+            className="w-full categories-swiper"
+            modules={[Navigation]}
+            navigation={{
+              nextEl: '.categories-next',
+              prevEl: '.categories-prev'
+            }}
+          >
+            <SwiperSlide>
+              <CategoryListItem
+                hotDeals="Hot Deals"
+                text="136 × 116"
+                label
+                icon={false}
+                lines
+                imagePlaceholderWidth="136px"
+                imagePlaceholderHeight="116px"
+                imagePlaceholderBorder="unset"
+                imagePlaceholderBorderRadius="1px"
+                imagePlaceholderBackground="#eee"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <CategoryListItem
+                hotDeals="iPhone"
+                text="136 × 116"
+                label
+                icon={false}
+                lines
+                imagePlaceholderWidth="136px"
+                imagePlaceholderHeight="116px"
+                imagePlaceholderBorder="unset"
+                imagePlaceholderBorderRadius="1px"
+                imagePlaceholderBackground="#eee"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <CategoryListItem
+                hotDeals="Samsung"
+                text="136 × 116"
+                label
+                icon={false}
+                lines
+                imagePlaceholderWidth="136px"
+                imagePlaceholderHeight="116px"
+                imagePlaceholderBorder="unset"
+                imagePlaceholderBorderRadius="1px"
+                imagePlaceholderBackground="#eee"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <CategoryListItem
+                hotDeals="Macbooks"
+                text="136 × 116"
+                label
+                icon={false}
+                lines
+                imagePlaceholderWidth="136px"
+                imagePlaceholderHeight="116px"
+                imagePlaceholderBorder="unset"
+                imagePlaceholderBorderRadius="1px"
+                imagePlaceholderBackground="#eee"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <CategoryListItem
+                hotDeals="Gaming"
+                text="136 × 116"
+                label
+                icon={false}
+                lines
+                imagePlaceholderWidth="136px"
+                imagePlaceholderHeight="116px"
+                imagePlaceholderBorder="unset"
+                imagePlaceholderBorderRadius="1px"
+                imagePlaceholderBackground="#eee"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <CategoryListItem
+                hotDeals="Laptops"
+                text="136 × 116"
+                label
+                icon={false}
+                lines
+                imagePlaceholderWidth="136px"
+                imagePlaceholderHeight="116px"
+                imagePlaceholderBorder="unset"
+                imagePlaceholderBorderRadius="1px"
+                imagePlaceholderBackground="#eee"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <CategoryListItem
+                hotDeals="iPads"
+                text="136 × 116"
+                label
+                icon={false}
+                lines
+                imagePlaceholderWidth="136px"
+                imagePlaceholderHeight="116px"
+                imagePlaceholderBorder="unset"
+                imagePlaceholderBorderRadius="1px"
+                imagePlaceholderBackground="#eee"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <CategoryListItem
+                hotDeals="Apple Watches"
+                text="136 × 116"
+                label
+                icon={false}
+                lines
+                imagePlaceholderWidth="136px"
+                imagePlaceholderHeight="116px"
+                imagePlaceholderBorder="unset"
+                imagePlaceholderBorderRadius="1px"
+                imagePlaceholderBackground="#eee"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <CategoryListItem
+                hotDeals="Accessories"
+                text="136 × 116"
+                label
+                icon={false}
+                lines
+                imagePlaceholderWidth="136px"
+                imagePlaceholderHeight="116px"
+                imagePlaceholderBorder="unset"
+                imagePlaceholderBorderRadius="1px"
+                imagePlaceholderBackground="#eee"
+              />
+            </SwiperSlide>
+          </Swiper>
+        </div>
+        <button
+          className="categories-next custom-swiper-nav swiper-button-next ml-2 w-10 h-10 flex items-center justify-center bg-transparent border-none p-0"
+          aria-label="Next"
+          type="button"
+          style={{ background: 'transparent', border: 'none', padding: 0 }}
+        >
+          <img src={`${import.meta.env.BASE_URL}categories-arrow-button.svg`} alt="Next" className="w-10 h-10" />
+        </button>
+      </div>
     </section>
   );
 };
