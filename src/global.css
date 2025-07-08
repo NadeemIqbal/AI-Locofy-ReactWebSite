@@ -66,3 +66,11 @@ body {
   transform: translateY(-50%) !important;
   z-index: 2;
 }
+
+.gradient-text {
+  background: linear-gradient(180deg, #7e19a0, #c82d8c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}

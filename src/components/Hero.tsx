@@ -45,16 +45,15 @@ const Hero: FunctionComponent<HeroType> = ({ className = "" }) => {
             </Typography>
           </Typography>
           <Button
-            className="!pt-Spacing-m !pb-Spacing-m !pl-Spacing-xl !pr-Spacing-xl"
+            className="!pt-Spacing-m !pb-Spacing-m !pl-Spacing-xl !pr-Spacing-xl gradient-text"
             disableElevation
             variant="contained"
             sx={{
               textTransform: "none",
-              color: "linear-gradient(180deg, #7e19a0, #c82d8c)",
-              fontSize: "18",
+              fontSize: "18px",
               background: "#fff",
               borderRadius: "40px",
-              "&:hover": { background: "#fff" },
+              '&:hover': { background: '#fff' },
             }}
           >
             Shop Deals
