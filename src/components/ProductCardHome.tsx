@@ -81,7 +81,7 @@ const ProductCardHome: FunctionComponent<ProductCardHomeType> = ({
           <DiscoutnTag property1={property11} />
         </Box>
         <img
-          src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-og-202104?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1617135051000"
+          src={`${import.meta.env.BASE_URL}iphone.svg`}
           alt="iPhone"
           style={{ width: imagePlaceholderWidth, height: imagePlaceholderHeight, border: imagePlaceholderBorder, borderRadius: imagePlaceholderBorderRadius, background: imagePlaceholderBackground }}
         />
