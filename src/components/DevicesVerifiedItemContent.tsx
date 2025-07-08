@@ -36,7 +36,7 @@ const DevicesVerifiedItemContent: FunctionComponent<
         className="w-12 h-12 relative"
         loading="lazy"
         alt=""
-        src={devicesVerifiedItemIcon}
+        src={devicesVerifiedItemIcon?.startsWith('/') ? `${import.meta.env.BASE_URL}${devicesVerifiedItemIcon.slice(1)}` : devicesVerifiedItemIcon}
       />
       <Typography
         className="self-stretch relative"
@@ -48,12 +48,12 @@ const DevicesVerifiedItemContent: FunctionComponent<
       </Typography>
       <div className="self-stretch relative text-Typography-Font-Sizes-p leading-Typography-Line-Height-p">
         <Typography className="!m-0" variant="inherit">
-          10 days to change your mind
+          10 days to change your mind
         </Typography>
         <Typography
           className="!m-0"
           variant="inherit"
-        >{`& 1 year warranty`}</Typography>
+        >{`& 1 year warranty`}</Typography>
       </div>
     </Box>
   );
