@@ -42,7 +42,7 @@ const Categories: FunctionComponent<CategoriesType> = ({ className = "" }) => {
               1024: { slidesPerView: 5 },
               1280: { slidesPerView: 7 },
             }}
-            className="w-full categories-swiper"
+            className="categories-swiper"
             modules={[Navigation]}
             navigation={{
               nextEl: '.categories-next',
