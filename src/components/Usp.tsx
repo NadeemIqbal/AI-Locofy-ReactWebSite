@@ -20,7 +20,7 @@ const Usp: FunctionComponent<UspType> = ({
         className="h-[42px] w-[42px] relative overflow-hidden shrink-0"
         loading="lazy"
         alt=""
-        src={monthWarranty}
+        src={monthWarranty?.startsWith('/') ? `${import.meta.env.BASE_URL}${monthWarranty.slice(1)}` : monthWarranty}
       />
       <Typography
         className="relative"
