@@ -17,14 +17,14 @@ export type CategoryListItemType = {
 };
 
 const categoryImages: Record<string, string> = {
-  'Hot Deals': 'https://cdn-icons-png.flaticon.com/512/833/833472.png',
-  'iPhone': 'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-og-202104?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1617135051000',
-  'Samsung': 'https://images.samsung.com/is/image/samsung/p6pim/levant/galaxy-s23/gallery/levant-galaxy-s23-s911-sm-s911bzadegy-thumb-535678237',
-  'Macbooks': 'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mbp16touch-silver-select-202110_GEO_EMEA_LANG_EN?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632788574000',
-  'Laptops': 'https://cdn-icons-png.flaticon.com/512/1792/1792864.png',
-  'iPads': 'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ipad-10th-gen-og-202210?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1665004540312',
-  'Apple Watches': 'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MKU93_VW_34FR+watch-44-alum-silver-nc-se_VW_34FR_WF_CO_GEO_EMEA_LANG_EN?wid=940&hei=1112&fmt=png-alpha&.v=1660778403946',
-  'Accessories': 'https://cdn-icons-png.flaticon.com/512/2921/2921822.png',
+  'Hot Deals': 'https://cdn-icons-png.flaticon.com/512/616/616490.png',
+  'iPhone': 'https://cdn-icons-png.flaticon.com/512/747/747376.png',
+  'Samsung': 'https://cdn-icons-png.flaticon.com/512/882/882704.png',
+  'Macbooks': 'https://cdn-icons-png.flaticon.com/512/1055/1055687.png',
+  'Laptops': 'https://cdn-icons-png.flaticon.com/512/337/337946.png',
+  'iPads': 'https://cdn-icons-png.flaticon.com/512/747/747376.png',
+  'Apple Watches': 'https://cdn-icons-png.flaticon.com/512/3103/3103446.png',
+  'Accessories': 'https://cdn-icons-png.flaticon.com/512/1042/1042330.png',
   'Gaming': 'https://cdn-icons-png.flaticon.com/512/1055/1055687.png',
 };
 
