@@ -45,7 +45,7 @@ const Hero: FunctionComponent<HeroType> = ({ className = "" }) => {
             </Typography>
           </Typography>
           <Button
-            className="!pt-Spacing-m !pb-Spacing-m !pl-Spacing-xl !pr-Spacing-xl gradient-text"
+            className="!pt-Spacing-m !pb-Spacing-m !pl-Spacing-xl !pr-Spacing-xl"
             disableElevation
             variant="contained"
             sx={{
@@ -53,10 +53,11 @@ const Hero: FunctionComponent<HeroType> = ({ className = "" }) => {
               fontSize: "18px",
               background: "#fff",
               borderRadius: "40px",
+              color: "#fff",
               '&:hover': { background: '#fff' },
             }}
           >
-            Shop Deals
+            <span className="gradient-text">Shop Deals</span>
           </Button>
         </Box>
       </Box>
