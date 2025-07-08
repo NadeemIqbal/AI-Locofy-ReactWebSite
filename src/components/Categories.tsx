@@ -187,11 +187,3 @@ const Categories: FunctionComponent<CategoriesType> = ({ className = "" }) => {
 };
 
 export default Categories;
-
-<style>
-.fixed-categories-arrow {
-  position: absolute !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-}
-</style>
