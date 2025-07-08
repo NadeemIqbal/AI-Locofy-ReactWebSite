@@ -36,12 +36,9 @@ const Categories: FunctionComponent<CategoriesType> = ({ className = "" }) => {
         <div>
           <Swiper
             spaceBetween={16}
-            slidesPerView={2}
-            breakpoints={{
-              640: { slidesPerView: 3 },
-              1024: { slidesPerView: 5 },
-              1280: { slidesPerView: 7 },
-            }}
+            slidesPerView="auto"
+            centeredSlides={false}
+            centerInsufficientSlides={false}
             className="categories-swiper"
             modules={[Navigation]}
             navigation={{
@@ -49,7 +46,7 @@ const Categories: FunctionComponent<CategoriesType> = ({ className = "" }) => {
               prevEl: '.categories-prev'
             }}
           >
-            <SwiperSlide>
+            <SwiperSlide style={{ width: 180 }}>
               <CategoryListItem
                 hotDeals="Hot Deals"
                 text="136 × 116"
@@ -63,7 +60,7 @@ const Categories: FunctionComponent<CategoriesType> = ({ className = "" }) => {
                 imagePlaceholderBackground="#eee"
               />
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide style={{ width: 180 }}>
               <CategoryListItem
                 hotDeals="iPhone"
                 text="136 × 116"
@@ -77,7 +74,7 @@ const Categories: FunctionComponent<CategoriesType> = ({ className = "" }) => {
                 imagePlaceholderBackground="#eee"
               />
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide style={{ width: 180 }}>
               <CategoryListItem
                 hotDeals="Samsung"
                 text="136 × 116"
@@ -91,7 +88,7 @@ const Categories: FunctionComponent<CategoriesType> = ({ className = "" }) => {
                 imagePlaceholderBackground="#eee"
               />
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide style={{ width: 180 }}>
               <CategoryListItem
                 hotDeals="Macbooks"
                 text="136 × 116"
@@ -105,7 +102,7 @@ const Categories: FunctionComponent<CategoriesType> = ({ className = "" }) => {
                 imagePlaceholderBackground="#eee"
               />
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide style={{ width: 180 }}>
               <CategoryListItem
                 hotDeals="Gaming"
                 text="136 × 116"
@@ -119,7 +116,7 @@ const Categories: FunctionComponent<CategoriesType> = ({ className = "" }) => {
                 imagePlaceholderBackground="#eee"
               />
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide style={{ width: 180 }}>
               <CategoryListItem
                 hotDeals="Laptops"
                 text="136 × 116"
@@ -133,7 +130,7 @@ const Categories: FunctionComponent<CategoriesType> = ({ className = "" }) => {
                 imagePlaceholderBackground="#eee"
               />
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide style={{ width: 180 }}>
               <CategoryListItem
                 hotDeals="iPads"
                 text="136 × 116"
@@ -147,7 +144,7 @@ const Categories: FunctionComponent<CategoriesType> = ({ className = "" }) => {
                 imagePlaceholderBackground="#eee"
               />
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide style={{ width: 180 }}>
               <CategoryListItem
                 hotDeals="Apple Watches"
                 text="136 × 116"
@@ -161,7 +158,7 @@ const Categories: FunctionComponent<CategoriesType> = ({ className = "" }) => {
                 imagePlaceholderBackground="#eee"
               />
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide style={{ width: 180 }}>
               <CategoryListItem
                 hotDeals="Accessories"
                 text="136 × 116"
