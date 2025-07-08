@@ -33,7 +33,7 @@ const Categories: FunctionComponent<CategoriesType> = ({ className = "" }) => {
         >
           <img src={`${import.meta.env.BASE_URL}categories-arrow-button.svg`} alt="Previous" className="w-10 h-10 rotate-180" />
         </button>
-        <div className="flex-1">
+        <div>
           <Swiper
             spaceBetween={16}
             slidesPerView={2}
