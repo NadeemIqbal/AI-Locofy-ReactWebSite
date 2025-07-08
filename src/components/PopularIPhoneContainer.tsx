@@ -66,32 +66,32 @@ const PopularIPhoneContainer: FunctionComponent<PopularIPhoneContainerType> = ({
           >
             {[...Array(10)].map((_, idx) => (
               <SwiperSlide key={idx}>
-                <ProductCardHome
-                  property1="Default"
-                  productCardHomeFlex="unset"
-                  productCardHomeWidth="260px"
-                  property11="Default"
-                  property12="Default"
+          <ProductCardHome
+            property1="Default"
+            productCardHomeFlex="unset"
+            productCardHomeWidth="260px"
+            property11="Default"
+            property12="Default"
                   text={`Image Placeholder ${idx + 1}`}
-                  label
-                  icon={false}
-                  lines
-                  imagePlaceholderWidth="212px"
-                  imagePlaceholderHeight="146px"
-                  imagePlaceholderBorder="1px solid #000"
-                  imagePlaceholderBorderRadius="unset"
-                  imagePlaceholderBackground="unset"
-                  colorSelectorProperty1="Default"
-                  colorSelectorProperty11="Default"
-                  colorSelectorProperty12="Default"
-                  colorSelectorProperty13="Default"
-                  colorSelectorProperty14="Default"
-                  colorSelectorRectangleBoxBackground="#a72627"
-                  colorSelectorRectangleBoxBackground1="#3b667f"
-                  colorSelectorRectangleBoxBackground2="#f6c3cc"
-                  colorSelectorRectangleBoxBackground3="#121212"
-                  colorSelectorRectangleBoxBackground4="#eddec9"
-                />
+            label
+            icon={false}
+            lines
+            imagePlaceholderWidth="212px"
+            imagePlaceholderHeight="146px"
+            imagePlaceholderBorder="1px solid #000"
+            imagePlaceholderBorderRadius="unset"
+            imagePlaceholderBackground="unset"
+            colorSelectorProperty1="Default"
+            colorSelectorProperty11="Default"
+            colorSelectorProperty12="Default"
+            colorSelectorProperty13="Default"
+            colorSelectorProperty14="Default"
+            colorSelectorRectangleBoxBackground="#a72627"
+            colorSelectorRectangleBoxBackground1="#3b667f"
+            colorSelectorRectangleBoxBackground2="#f6c3cc"
+            colorSelectorRectangleBoxBackground3="#121212"
+            colorSelectorRectangleBoxBackground4="#eddec9"
+          />
               </SwiperSlide>
             ))}
           </Swiper>
