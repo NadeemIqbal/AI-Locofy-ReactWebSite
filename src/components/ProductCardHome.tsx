@@ -80,18 +80,18 @@ const ProductCardHome: FunctionComponent<ProductCardHomeType> = ({
         <Box className="w-[260px] flex flex-col items-start justify-start !p-3 box-border">
           <DiscoutnTag property1={property11} />
         </Box>
-        <ImagePlaceholder
-          property1={property12}
-          text={text}
-          label={label}
-          icon={icon}
-          lines={lines}
-          imagePlaceholderWidth={imagePlaceholderWidth}
-          imagePlaceholderHeight={imagePlaceholderHeight}
-          imagePlaceholderBorder={imagePlaceholderBorder}
-          imagePlaceholderBorderRadius={imagePlaceholderBorderRadius}
-          imagePlaceholderBackgroundColor={imagePlaceholderBackground}
-          lines1="/lines-9.svg"
+        <img
+          src={
+            [
+              'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-14-pro-max-deep-purple-select?wid=940&hei=1112&fmt=png-alpha&.v=1660753619946',
+              'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-max-family-hero',
+              'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-og-202104?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1617135051000',
+              'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-11-og-201909?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1567021766023',
+              'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-se-og-202203?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1644987933612'
+            ][(Math.floor(Math.random() * 5))]
+          }
+          alt="iPhone"
+          style={{ width: imagePlaceholderWidth, height: imagePlaceholderHeight, border: imagePlaceholderBorder, borderRadius: imagePlaceholderBorderRadius, background: imagePlaceholderBackground }}
         />
       </Box>
       <Box className="self-stretch flex flex-col items-start justify-start !pt-0 !pb-Spacing-m !pl-Spacing-m !pr-Spacing-m gap-Spacing-xm">

@@ -139,7 +139,7 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
                 <img
                   className="w-7 relative h-[26px] overflow-hidden shrink-0"
                   alt=""
-                  src="/flag.svg"
+                  src={`${import.meta.env.BASE_URL}flag.svg`}
                 />
                 <div className="relative leading-Typography-Line-Height-p font-medium">
                   UAE
@@ -150,7 +150,7 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
             <img
               className="w-[34px] relative h-[34px] overflow-hidden shrink-0"
               alt=""
-              src="/bag.svg"
+              src={`${import.meta.env.BASE_URL}bag.svg`}
             />
           </Box>
         </Box>
