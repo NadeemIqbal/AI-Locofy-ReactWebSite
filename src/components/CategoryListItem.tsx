@@ -52,18 +52,6 @@ const CategoryListItem: FunctionComponent<CategoryListItemType> = ({
           style={{ width: '48px', height: '48px', objectFit: 'contain', margin: '12px auto 8px' }}
         />
       )}
-      <ImagePlaceholder
-        text={text}
-        label={label}
-        icon={icon}
-        lines={lines}
-        imagePlaceholderWidth={imagePlaceholderWidth}
-        imagePlaceholderHeight={imagePlaceholderHeight}
-        imagePlaceholderBorder={imagePlaceholderBorder}
-        imagePlaceholderBorderRadius={imagePlaceholderBorderRadius}
-        imagePlaceholderBackgroundColor={imagePlaceholderBackground}
-        lines1="/lines.svg"
-      />
       <Typography
         className="relative"
         variant="inherit"

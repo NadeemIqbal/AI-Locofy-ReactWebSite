@@ -167,18 +167,18 @@ const Categories: FunctionComponent<CategoriesType> = ({ className = "" }) => {
         </SwiperSlide>
       </Swiper>
       <button
-        className="categories-prev custom-swiper-nav swiper-button-prev absolute top-1/2 left-7 -translate-y-1/2 z-[2] w-10 h-10 flex items-center justify-center bg-transparent border-none p-0"
+        className="categories-prev custom-swiper-nav swiper-button-prev fixed-categories-arrow left-7 z-[2] w-10 h-10 flex items-center justify-center bg-transparent border-none p-0"
         aria-label="Previous"
         type="button"
-        style={{ background: 'transparent', border: 'none', padding: 0 }}
+        style={{ background: 'transparent', border: 'none', padding: 0, top: '50%', transform: 'translateY(-50%)' }}
       >
         <img src={`${import.meta.env.BASE_URL}categories-arrow-button.svg`} alt="Previous" className="w-10 h-10 rotate-180" />
       </button>
       <button
-        className="categories-next custom-swiper-nav swiper-button-next absolute top-1/2 right-7 -translate-y-1/2 z-[2] w-10 h-10 flex items-center justify-center bg-transparent border-none p-0"
+        className="categories-next custom-swiper-nav swiper-button-next fixed-categories-arrow right-7 z-[2] w-10 h-10 flex items-center justify-center bg-transparent border-none p-0"
         aria-label="Next"
         type="button"
-        style={{ background: 'transparent', border: 'none', padding: 0 }}
+        style={{ background: 'transparent', border: 'none', padding: 0, top: '50%', transform: 'translateY(-50%)' }}
       >
         <img src={`${import.meta.env.BASE_URL}categories-arrow-button.svg`} alt="Next" className="w-10 h-10" />
       </button>
@@ -187,3 +187,11 @@ const Categories: FunctionComponent<CategoriesType> = ({ className = "" }) => {
 };
 
 export default Categories;
+
+<style>
+.fixed-categories-arrow {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+</style>
