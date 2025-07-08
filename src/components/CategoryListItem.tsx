@@ -49,7 +49,10 @@ const CategoryListItem: FunctionComponent<CategoryListItemType> = ({
         <img
           src={categoryImages[hotDeals]}
           alt={hotDeals}
-          style={{ width: '48px', height: '48px', objectFit: 'contain', margin: '12px auto 8px' }}
+          style={hotDeals === 'Hot Deals'
+            ? { width: '72px', height: '72px', objectFit: 'contain', margin: '32px auto 24px', display: 'block' }
+            : { width: '48px', height: '48px', objectFit: 'contain', margin: '12px auto 8px', display: 'block' }
+          }
         />
       )}
       <Typography

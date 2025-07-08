@@ -63,5 +63,11 @@ body {
 .fixed-categories-arrow {
   position: absolute !important;
   top: 50% !important;
+  left: 0;
+  right: 0;
   transform: translateY(-50%) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
 }
