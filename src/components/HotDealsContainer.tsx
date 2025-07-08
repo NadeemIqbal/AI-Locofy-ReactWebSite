@@ -110,46 +110,6 @@ const HotDealsContainer: FunctionComponent<HotDealsContainerType> = ({
                 colorSelectorRectangleBoxBackground2="#f6c3cc"
                 colorSelectorRectangleBoxBackground3="#121212"
                 colorSelectorRectangleBoxBackground4="#eddec9"
-              >
-                <img
-                  src={[
-                    'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-14-pro-max-deep-purple-select?wid=940&hei=1112&fmt=png-alpha&.v=1660753619946',
-                    'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-max-family-hero',
-                    'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-og-202104?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1617135051000',
-                    'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-11-og-201909?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1567021766023',
-                    'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-se-og-202203?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1644987933612'
-                  ][Math.floor(Math.random() * 5)]}
-                  alt="iPhone"
-                  style={{ width: '212px', height: '146px', border: '1px solid #000', borderRadius: 'unset', background: 'unset' }}
-                />
-              </ProductCardHome>
-            </SwiperSlide>
-            <SwiperSlide>
-              <ProductCardHome
-                property1="Default"
-                productCardHomeFlex="1"
-                productCardHomeWidth="unset"
-                property11="Default"
-                property12="Default"
-                text="Image Placeholder"
-                label
-                icon={false}
-                lines
-                imagePlaceholderWidth="212px"
-                imagePlaceholderHeight="146px"
-                imagePlaceholderBorder="1px solid #000"
-                imagePlaceholderBorderRadius="unset"
-                imagePlaceholderBackground="unset"
-                colorSelectorProperty1="Default"
-                colorSelectorProperty11="Default"
-                colorSelectorProperty12="Default"
-                colorSelectorProperty13="Default"
-                colorSelectorProperty14="Default"
-                colorSelectorRectangleBoxBackground="#a72627"
-                colorSelectorRectangleBoxBackground1="#3b667f"
-                colorSelectorRectangleBoxBackground2="#f6c3cc"
-                colorSelectorRectangleBoxBackground3="#121212"
-                colorSelectorRectangleBoxBackground4="#eddec9"
               />
             </SwiperSlide>
             <SwiperSlide>
